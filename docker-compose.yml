@@ -1,0 +1,20 @@
+version: "3.2"
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_USER: odoo
+    volumes:
+      - type: bind
+        source: ${DB_PG_DATA}
+        target: /var/lib/postgresql/data
+  web:
+    image: odoo:latest
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
