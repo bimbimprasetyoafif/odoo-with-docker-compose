@@ -8,10 +8,6 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: odoo
       POSTGRES_USER: odoo
-    volumes:
-      - type: bind
-        source: ${DB_PG_DATA}
-        target: /var/lib/postgresql/data
   web:
     image: odoo:latest
     depends_on:
