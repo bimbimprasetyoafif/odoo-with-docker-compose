@@ -6,3 +6,8 @@
 - Access http://localhost:8069 to open odoo in browser
 
 ## Feel free to contribute
+
+## Cara Menggunakan
+- Pastikan komputer anda sudah terinstall Docker
+- Ketik "docker-compose up" di command prompt / terminal
+- Akses http://localhost:8069 untuk membuka odoo di browser
